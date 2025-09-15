@@ -3,17 +3,34 @@
 {% block content %}
     <form action="{{ url_for('add') }}" method="POST">
         <input type="text" name="task" placeholder="Enter a task" required>
+        <select name="day" required>
+            <option value="" disabled selected>Select a day</option>
+            <option>Monday</option>
+            <option>Tuesday</option>
+            <option>Wednesday</option>
+            <option>Thursday</option>
+            <option>Friday</option>
+            <option>Saturday</option>
+            <option>Sunday</option>
+        </select>
         <button type="submit">Add</button>
     </form>
 
-    <ul>
-        {% for task in tasks %}
-            <li>
-                {{ task.content }}
-                <a href="{{ url_for('delete', task_id=task.id) }}">DONE</a>
-            </li>
-        {% else %}
-            <li>No tasks yet!</li>
+    <div class="week">
+        {% for day, tasks in tasks_by_day.items() %}
+            <div class="day-box">
+                <h3>{{ day }}</h3>
+                <ul>
+                    {% for task in tasks %}
+                        <li>
+                            {{ task.content }}
+                            <a href="{{ url_for('delete', task_id=task.id) }}">❌</a>
+                        </li>
+                    {% else %}
+                        <li>No tasks yet</li>
+                    {% endfor %}
+                </ul>
+            </div>
         {% endfor %}
-    </ul>
+    </div>
 {% endblock %}

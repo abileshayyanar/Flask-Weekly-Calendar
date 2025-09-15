@@ -1,31 +1,25 @@
-body {
-    font-family: Copperplate, sans-serif;
-    background: #e6a40b;
-    display: flex;
-    justify-content: center;
-    padding: 40px;
+.week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 15px;
+    margin-top: 20px;
 }
-.container {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+
+.day-box {
+    background: hwb(31 78% 2%);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
+    min-height: 150px;
 }
-form {
-    margin-bottom: 20px;
+
+.day-box h3 {
+    margin-top: 0;
+    text-align: center;
+    color: #333;
 }
-input {
-    padding: 8px;
-}
-button {
-    padding: 8px 12px;
-    margin-left: 5px;
-}
-li {
-    margin: 5px 0;
-}
-a {
-    margin-left: 10px;
-    color: red;
-    text-decoration: none;
+
+.day-box ul {
+    list-style-type: none;
+    padding-left: 0;
 }
