@@ -1,6 +1,10 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 import os
+from datetime import date, timedelta
+
+today = date.today()
+sunday = today - timedelta(days=today.weekday() + 1 if today.weekday() != 6 else 0)
 
 app = Flask(__name__)
 
@@ -20,11 +24,13 @@ class Task(db.Model):
     def __repr__(self):
         return f"<Task {self.id}: {self.content} on {self.day}>"
 
+# ADD DATE HEADING IN INDEX.HTML!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 @app.route("/")
 def index():
-    days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     tasks_by_day = {day: Task.query.filter_by(day=day).all() for day in days}
-    return render_template("index.html", tasks_by_day=tasks_by_day)
+    return render_template("index.html", tasks_by_day=tasks_by_day, week_sunday=sunday)
 
 @app.route("/add", methods=["POST"])
 def add():
@@ -45,5 +51,5 @@ def delete(task_id):
 
 if __name__ == "__main__":
     with app.app_context():
-        db.create_all()  # Creates the new "day" column if fresh DB
+        db.create_all()
     app.run(debug=True)

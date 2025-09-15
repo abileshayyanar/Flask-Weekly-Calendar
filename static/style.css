@@ -1,3 +1,7 @@
+body{
+    background-color: hsl(24, 82%, 75%);
+}
+
 .week {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -6,11 +10,12 @@
 }
 
 .day-box {
-    background: hwb(31 78% 2%);
+    background: lab(87.57% 6.95 34.65);
     padding: 15px;
     border-radius: 8px;
     box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
     min-height: 150px;
+    font-family: "Garamond", serif;
 }
 
 .day-box h3 {
@@ -22,4 +27,11 @@
 .day-box ul {
     list-style-type: none;
     padding-left: 0;
+}
+
+.checkbox-container label {
+  color: #c0ac91;
+  font-family: 'Garamond', serif;
+  font-weight: bold;
+  font-size: 16px;
 }
