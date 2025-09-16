@@ -12,10 +12,10 @@ body{
 .day-box {
     background: lab(85.36% 13.49 25.47);
     padding: 15px;
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
     min-height: 150px;
-    font-family: "Garamond", serif;
+    font-family: "Abril Fatface", serif;
 }
 
 .day-box h3 {
@@ -31,17 +31,29 @@ body{
 
 .checkbox-container label {
   color: #c0ac91;
-  font-family: 'Garamond', serif;
+  font-family: 'Abril Fatface', serif;
   font-weight: bold;
   font-size: 16px;
 }
 
-.date-heading{
+.date-heading {
     color: #b04308;
-    font-family: 'Garamond', serif;
+    font-family: 'Abril Fatface', 'URW Bookman L', serif;
     font-size: 2rem;
     font-weight: bold;
     font-weight: bold;
     text-align: left;
     margin-bottom: 20px;
+}
+
+.days {
+    font-family: 'Abril Fatface', serif;
+}
+
+input[type="text"] {
+  border: 2px solid #60361f;
+  border-radius: 20px;
+  padding: 8px;
+  font-size: 16px;
+  outline: none;
 }
