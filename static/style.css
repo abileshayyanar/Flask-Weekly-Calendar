@@ -50,6 +50,23 @@ body{
     font-family: 'Abril Fatface', serif;
 }
 
+.checkbox-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-family: 'Abril Fatface', serif;
+}
+
+.button {
+    background-color:#60361f;
+    color: white;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-family: 'Abril Fatface', serif;
+    font-size: 16px;
+}
+
 input[type="text"] {
   border: 2px solid #60361f;
   border-radius: 20px;

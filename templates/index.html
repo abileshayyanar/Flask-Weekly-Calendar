@@ -6,37 +6,40 @@
         <h2 class="date-heading">Week of {{ week_sunday.strftime('%B %d, %Y') }}</h2>
         <input type="text" name="task" placeholder="Enter a task" required>
 
-        <body>
-        <label class="days">
-        <input type="checkbox" name="days" value="Sunday"> Sunday
-        </label>
-        
-        <label class="days">
-        <input type="checkbox" name="days" value="Monday"> Monday
-        </label>
+        <div class ="checkbox-row">
 
-        <label class="days">
-        <input type="checkbox" name="days" value="Tuesday"> Tuesday
-        </label>
+            <label>
+            <input type="checkbox" name="days" value="Sunday"> Sunday
+            </label>
+            
+            <label>
+            <input type="checkbox" name="days" value="Monday"> Monday
+            </label>
 
-        <label class="days">
-        <input type="checkbox" name="days" value="Wednesday"> Wednesday
-        </label>
+            <label>
+            <input type="checkbox" name="days" value="Tuesday"> Tuesday
+            </label>
 
-        <label class="days">
-        <input type="checkbox" name="days" value="Thursday"> Thursday
-        </label>
+            <label>
+            <input type="checkbox" name="days" value="Wednesday"> Wednesday
+            </label>
 
-        <label class="days">
-        <input type="checkbox" name="days" value="Friday"> Friday
-        </label>
+            <label>
+            <input type="checkbox" name="days" value="Thursday"> Thursday
+            </label>
 
-        <label class="days">
-        <input type="checkbox" name="days" value="Saturday"> Saturday
-        </label>
+            <label>
+            <input type="checkbox" name="days" value="Friday"> Friday
+            </label>
 
+            <label>
+            <input type="checkbox" name="days" value="Saturday"> Saturday
+            </label>
+        </div>
         <span class="checkmark"></span>
-        <button type="submit">Add</button>
+
+        <button type="submit" class="button">Add</button>
+        
     </form>
 
     <div class="week">
