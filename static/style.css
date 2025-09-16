@@ -75,10 +75,16 @@ body{
     font-family: 'Abril Fatface', serif;
 }
 
-.task-desc {
+.task-desc-box {
     border: 2px solid #84370e;
     border-radius: 20px;
     padding: 8px;
     font-size: 12px;
     font-family: 'Abril Fatface', serif;
+}
+
+.task-desc {
+    font-size: 12px;
+    font-family: 'Abril Fatface', serif;
+    color: #865840
 }

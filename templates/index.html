@@ -5,7 +5,7 @@
 
     <h2 class="date-heading">Week of {{ week_sunday.strftime('%B %d, %Y') }}</h2>
     <input type="text" name="task" class="task-input" placeholder="Enter a task" required>
-    <div><input type="text" name="description" class="task-desc" placeholder="Enter details (optional)"></div>
+    <div><input type="text" name="description" class="task-desc-box" placeholder="Enter details (optional)"></div>
 
     <div class="checkbox-row">
 
@@ -49,20 +49,22 @@
                 <h3>{{ day }}</h3>
                 <ul>
                     {% for task in tasks %}
-                        <li>
+                        <li class="task-title">
                             {% if task.done %}
                                 <span style="text-decoration: line-through; color: #888;">{{ task.content }}</span>
                             {% else %}
                                 {{ task.content }}
-                                <a href="{{ url_for('mark_done', task_id=task.id) }}">✓</a>
                             {% endif %}
                             {% if task.description %}
                                 <div class="task-desc">{{ task.description }}</div>
                             {% endif %}
-                            <a href="{{ url_for('delete', task_id=task.id) }}">✕</a>
+                            <li>
+                                <a href="{{ url_for('mark_done', task_id=task.id) }}">done</a>
+                                <a href="{{ url_for('delete', task_id=task.id) }}">delete</a>
+                            </li>
                         </li>
                     {% else %}
-                        <li>No tasks yet</li>
+                        <li style="list-style-type:none;">No tasks yet</li>
                     {% endfor %}
                 </ul>
             </div>
