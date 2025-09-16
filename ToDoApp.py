@@ -21,6 +21,7 @@ class Task(db.Model):
     content = db.Column(db.String(200), nullable=False)
     day = db.Column(db.String(10), nullable=False)  # Store day of week
     done = db.Column(db.Boolean, default=False)
+    description = db.Column(db.String(300))
 
     def __repr__(self):
         return f"<Task {self.id}: {self.content} on {self.day}>"
@@ -35,9 +36,10 @@ def index():
 def add():
     task_content = request.form.get("task")
     task_days = request.form.getlist("days")
+    task_description = request.form.get("description")
     if task_content and task_days:
         for day in task_days:
-            new_task = Task(content=task_content, day=day)
+            new_task = Task(content=task_content, day=day, description=task_description)
             db.session.add(new_task)
         db.session.commit()
     return redirect(url_for("index"))

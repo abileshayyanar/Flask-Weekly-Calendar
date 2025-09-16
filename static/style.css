@@ -30,10 +30,10 @@ body{
 }
 
 .checkbox-container label {
-  color: #c0ac91;
-  font-family: 'Abril Fatface', serif;
-  font-weight: bold;
-  font-size: 16px;
+    color: #c0ac91;
+    font-family: 'Abril Fatface', serif;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 .date-heading {
@@ -67,10 +67,18 @@ body{
     font-size: 16px;
 }
 
-input[type="text"] {
-  border: 2px solid #84370e;
-  border-radius: 20px;
-  padding: 8px;
-  font-size: 16px;
-  outline: none;
+.task-input {
+    border: 2px solid #84370e;
+    border-radius: 20px;
+    padding: 8px;
+    font-size: 16px;
+    font-family: 'Abril Fatface', serif;
+}
+
+.task-desc {
+    border: 2px solid #84370e;
+    border-radius: 20px;
+    padding: 8px;
+    font-size: 12px;
+    font-family: 'Abril Fatface', serif;
 }

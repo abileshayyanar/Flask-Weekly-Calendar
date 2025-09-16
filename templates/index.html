@@ -3,10 +3,11 @@
 {% block content %}
     <form action="{{ url_for('add') }}" method="POST">
 
-        <h2 class="date-heading">Week of {{ week_sunday.strftime('%B %d, %Y') }}</h2>
-        <input type="text" name="task" placeholder="Enter a task" required>
+    <h2 class="date-heading">Week of {{ week_sunday.strftime('%B %d, %Y') }}</h2>
+    <input type="text" name="task" class="task-input" placeholder="Enter a task" required>
+    <div><input type="text" name="description" class="task-desc" placeholder="Enter details (optional)"></div>
 
-        <div class ="checkbox-row">
+    <div class="checkbox-row">
 
             <label>
             <input type="checkbox" name="days" value="Sunday"> Sunday
@@ -54,6 +55,9 @@
                             {% else %}
                                 {{ task.content }}
                                 <a href="{{ url_for('mark_done', task_id=task.id) }}">✓</a>
+                            {% endif %}
+                            {% if task.description %}
+                                <div class="task-desc">{{ task.description }}</div>
                             {% endif %}
                             <a href="{{ url_for('delete', task_id=task.id) }}">✕</a>
                         </li>
