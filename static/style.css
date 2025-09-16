@@ -21,7 +21,7 @@ body{
 .day-box h3 {
     margin-top: 0;
     text-align: center;
-    color: #333;
+    color: #6a2c0b;
 }
 
 .day-box ul {
@@ -37,7 +37,7 @@ body{
 }
 
 .date-heading {
-    color: #b04308;
+    color: #84370e;
     font-family: 'Abril Fatface', 'URW Bookman L', serif;
     font-size: 2rem;
     font-weight: bold;
@@ -59,7 +59,7 @@ body{
 }
 
 .button {
-    background-color:#60361f;
+    background-color:#84370e;
     color: white;
     border-radius: 12px;
     padding: 10px 20px;
@@ -68,7 +68,7 @@ body{
 }
 
 input[type="text"] {
-  border: 2px solid #60361f;
+  border: 2px solid #84370e;
   border-radius: 20px;
   padding: 8px;
   font-size: 16px;
