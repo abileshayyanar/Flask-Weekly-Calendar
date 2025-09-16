@@ -20,11 +20,10 @@ class Task(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.String(200), nullable=False)
     day = db.Column(db.String(10), nullable=False)  # Store day of week
+    done = db.Column(db.Boolean, default=False)
 
     def __repr__(self):
         return f"<Task {self.id}: {self.content} on {self.day}>"
-
-# ADD DATE HEADING IN INDEX.HTML!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 @app.route("/")
 def index():
@@ -35,10 +34,11 @@ def index():
 @app.route("/add", methods=["POST"])
 def add():
     task_content = request.form.get("task")
-    task_day = request.form.get("day")
-    if task_content and task_day:
-        new_task = Task(content=task_content, day=task_day)
-        db.session.add(new_task)
+    task_days = request.form.getlist("days")
+    if task_content and task_days:
+        for day in task_days:
+            new_task = Task(content=task_content, day=day)
+            db.session.add(new_task)
         db.session.commit()
     return redirect(url_for("index"))
 
@@ -46,6 +46,13 @@ def add():
 def delete(task_id):
     task = Task.query.get_or_404(task_id)
     db.session.delete(task)
+    db.session.commit()
+    return redirect(url_for("index"))
+
+@app.route("/mark_done/<int:task_id>")
+def mark_done(task_id):
+    task = Task.query.get_or_404(task_id)
+    task.done = True
     db.session.commit()
     return redirect(url_for("index"))
 

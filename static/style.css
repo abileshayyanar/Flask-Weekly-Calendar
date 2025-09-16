@@ -37,10 +37,11 @@ body{
 }
 
 .date-heading{
-    color: #b04308;           /* Change to your desired color */
-    font-family: 'Garamond', serif; /* Change font */
-    font-size: 2rem;           /* Adjust size */
-    font-weight: bold;         /* Make bold */
-    text-align: center;        /* Center the heading */
-    margin-bottom: 20px;       /* Add spacing below */
+    color: #b04308;
+    font-family: 'Garamond', serif;
+    font-size: 2rem;
+    font-weight: bold;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px;
 }
