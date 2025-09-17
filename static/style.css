@@ -1,5 +1,5 @@
 body{
-    background-color: hsl(24, 82%, 75%);
+    background-color: hsl(106, 28%, 52%);
 }
 
 .week {
@@ -10,12 +10,13 @@ body{
 }
 
 .day-box {
-    background: lab(85.36% 13.49 25.47);
+    background: #98c570;
     padding: 15px;
     border-radius: 12px;
     box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
     min-height: 150px;
-    font-family: "Abril Fatface", serif;
+    font-family: "Georgia", serif;
+    font-weight: bolder
 }
 
 .day-box h3 {
@@ -25,29 +26,33 @@ body{
 }
 
 .day-box ul {
-    list-style-type: none;
-    padding-left: 0;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.day-box ul li.no-tasks {
+    list-style: none;
 }
 
 .checkbox-container label {
-    color: #c0ac91;
-    font-family: 'Abril Fatface', serif;
-    font-weight: bold;
+    color: #55832d;
+    font-family: 'Georgia', serif;
+    font-weight: bolder;
     font-size: 16px;
 }
 
 .date-heading {
     color: #84370e;
-    font-family: 'Abril Fatface', 'URW Bookman L', serif;
+    font-family: 'Georgia', serif;
     font-size: 2rem;
-    font-weight: bold;
-    font-weight: bold;
+    font-weight: 1000;
     text-align: left;
     margin-bottom: 20px;
 }
 
 .days {
-    font-family: 'Abril Fatface', serif;
+    font-family: 'Georgia', serif;
+    font-weight: bolder
 }
 
 .checkbox-row {
@@ -55,7 +60,8 @@ body{
     flex-wrap: wrap;
     margin-bottom: 15px;
     margin-top: 15px;
-    font-family: 'Abril Fatface', serif;
+    font-family: 'Georgia', serif;
+    font-weight: bolder
 }
 
 .button {
@@ -63,8 +69,9 @@ body{
     color: white;
     border-radius: 12px;
     padding: 10px 20px;
-    font-family: 'Abril Fatface', serif;
+    font-family: 'Georgia', serif;
     font-size: 16px;
+    font-weight: bolder;
 }
 
 .task-input {
@@ -72,7 +79,8 @@ body{
     border-radius: 20px;
     padding: 8px;
     font-size: 16px;
-    font-family: 'Abril Fatface', serif;
+    font-family: 'Georgia', serif;
+    font-weight: bolder;
 }
 
 .task-desc-box {
@@ -80,11 +88,19 @@ body{
     border-radius: 20px;
     padding: 8px;
     font-size: 12px;
-    font-family: 'Abril Fatface', serif;
+    font-family: 'Georgia', serif;
+    font-weight: bolder;
 }
 
 .task-desc {
     font-size: 12px;
-    font-family: 'Abril Fatface', serif;
+    font-family: 'Georgia', serif;
+    font-weight: bolder;
     color: #865840
+}
+
+a.noUnderline {
+    text-decoration: none; 
+    padding-right: 5px;
+    font-size: 12px;
 }

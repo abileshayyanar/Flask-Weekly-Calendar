@@ -58,13 +58,13 @@
                             {% if task.description %}
                                 <div class="task-desc">{{ task.description }}</div>
                             {% endif %}
-                            <li>
-                                <a href="{{ url_for('mark_done', task_id=task.id) }}">done</a>
-                                <a href="{{ url_for('delete', task_id=task.id) }}">delete</a>
-                            </li>
+                            <div class="task-actions">
+                                <a href="{{ url_for('mark_done', task_id=task.id) }}" class="noUnderline">done</a>
+                                <a href="{{ url_for('delete', task_id=task.id) }}" class="noUnderline">delete</a>
+                            </div>
                         </li>
                     {% else %}
-                        <li style="list-style-type:none;">No tasks yet</li>
+                        <li class="no-tasks">No tasks yet</li>
                     {% endfor %}
                 </ul>
             </div>
