@@ -13,6 +13,7 @@ body{
     background: #98c570;
     padding: 15px;
     border-radius: 12px;
+    border: 2px solid #0b4504;
     box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
     min-height: 150px;
     font-family: "Georgia", serif;
@@ -48,6 +49,7 @@ body{
     font-weight: 1000;
     text-align: left;
     margin-bottom: 20px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .days {
@@ -68,6 +70,7 @@ body{
     background-color:#84370e;
     color: white;
     border-radius: 12px;
+    border: 2px solid black;
     padding: 10px 20px;
     font-family: 'Georgia', serif;
     font-size: 16px;
@@ -76,7 +79,7 @@ body{
 
 .task-input {
     border: 2px solid #84370e;
-    border-radius: 20px;
+    border-radius: 18px;
     padding: 8px;
     font-size: 16px;
     font-family: 'Georgia', serif;
@@ -85,7 +88,7 @@ body{
 
 .task-desc-box {
     border: 2px solid #84370e;
-    border-radius: 20px;
+    border-radius: 18px;
     padding: 8px;
     font-size: 12px;
     font-family: 'Georgia', serif;
